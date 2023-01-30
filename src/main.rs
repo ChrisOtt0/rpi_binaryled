@@ -36,7 +36,7 @@ fn main() {
         let _ = io::stdout().flush();
         io::stdin().read_line(&mut input).expect("Error reading from STDIN.");
         
-        match input.parse::<usize>() {
+        match input.trim().parse::<usize>() {
             Ok(v) => {
                 if v > 16 {
                     println!("Unknown request. Please try again.");
